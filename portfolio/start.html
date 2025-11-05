@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NISCHAY - TECHIE 15 YO</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(254, 250, 224);
+      color: #283618; 
+      font-family: 'Roboto', sans-serif;
+    }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px; 
+  background-color: #3a4417; 
+  color: white;
+  font-size: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav .left {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px; 
+  margin: 0;
+}
+
+nav ul li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+  color: #e9edc9;
+}
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 80vh;
+  padding: 60px;
+  gap: 60px;
+}
+
+
+.intro {
+  flex: 1; /
+}
+
+.intro h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.intro h2 {
+  font-size: 28px;
+  color: #606c38;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.intro p {
+  font-weight: 400;
+}
+
+.about h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 16px;
+  max-width: 700px;
+}
+
+  <span id="element"></span>
+  #element {
+    font-size: 90px;
+    color: rgb(99, 110, 114);
+    font-weight: 100;
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div>NIS's Portfolio</div>
+      <div>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Projects</li>
+          <li>Contact</li>
+          <li>LinkedIn</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<main>
+  <section class="hero">
+    <div class="intro">
+      <h1>Hi, I'm Nischay</h1>
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <span id="element"></span>
+      <script>
+        var typed = new Typed('#element', {
+          strings: ['A Techie 15 YO', 'A Programmer', 'A Web Developer', 'A Tech Enthusiast'],
+          typeSpeed: 40,
+        });
+      </script>
+      <p>Welcome to my portfolio website! I'm passionate about technology and love to explore new advancements in the field. Here, you'll find information about my projects, skills, and experiences. Feel free to browse around and get to know more about me!</p>
+    </div>
+
+    <div class="about">
+      <h1>About Me</h1>
+      <p>I am a 15-year-old tech enthusiast with a keen interest in programming, web development, and emerging technologies. I enjoy working on projects that challenge me to learn and grow my skills. In my free time, I like to read tech blogs, experiment with coding, and participate in online tech communities.</p>
+    </div>
+  </section>
+  
+
+</main>
+</body>
+</html>
