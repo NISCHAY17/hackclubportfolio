@@ -1,159 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NISCHAY - TECHIE 15 YO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nischay - 15 Year Old Developer & Tech Enthusiast</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     body {
-      background-color: rgb(254, 250, 224);
-      color: #283618; 
-      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #fefae0 0%, #faedcd 100%);
+      color: #283618;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      font-size: 16px;
     }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 60px; 
-  background-color: #3a4417; 
-  color: white;
-  font-size: 18px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .stack > * + * { margin-top: 20px; }
+    .stack-lg > * + * { margin-top: 40px; }
 
-nav .left {
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: 1px;
-}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 32px;
+      background: linear-gradient(90deg, #3a4417 0%, #606c38 100%);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    nav .brand { font-weight: 700; font-size: 22px; letter-spacing: 0.3px; }
+    nav ul { list-style: none; display: flex; gap: 8px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: all .25s ease;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    nav a:hover { background-color: rgba(255,255,255,0.15); transform: translateY(-1px); }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 30px; 
-  margin: 0;
-}
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 80px 0;
+      align-items: start;
+    }
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      color: #283618;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    #element {
+      font-size: 28px;
+      color: #606c38;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 24px;
+      min-height: 36px;
+    }
+    .hero p { font-size: 17px; color: #3a4417; max-width: 580px; }
 
-nav ul li {
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
 
-nav ul li:hover {
-  color: #e9edc9;
-}
+    section { padding: 80px 0; }
+    section h1 {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      color: #283618;
+      position: relative;
+      padding-bottom: 16px;
+    }
+    section h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #606c38, #3a4417);
+      border-radius: 2px;
+    }
 
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .project-card {
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+      border-left: 4px solid #606c38;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: all .25s ease;
+    }
+    .project-card:hover {
+      transform: translateX(4px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-left-color: #3a4417;
+    }
+    .project-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #283618;
+      margin-bottom: 8px;
+    }
+    .project-card p { font-size: 15px; color: #606c38; line-height: 1.6; }
 
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  min-height: 80vh;
-  padding: 60px;
-  gap: 60px;
-}
+    .story-timeline {
+      background: white;
+      padding: 48px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-top: 40px;
+    }
+    .story-timeline p {
+      font-size: 16px;
+      color: #3a4417;
+      margin-bottom: 18px;
+      padding-left: 24px;
+      border-left: 3px solid #d4a373;
+      line-height: 1.8;
+    }
 
+    .achievements {
+      background: linear-gradient(135deg, #606c38 0%, #3a4417 100%);
+      color: white;
+      padding: 60px 48px;
+      border-radius: 16px;
+      text-align: center;
+      margin-top: 40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    .achievements h1 { color: white; font-size: 36px; }
+    .achievements h1::after { background: white; left: 50%; transform: translateX(-50%); }
+    .achievements p { font-size: 22px; font-weight: 600; margin-top: 20px; color: #fefae0; }
 
-.intro {
-  flex: 1; /
-}
+    footer {
+      background: #283618;
+      color: #fefae0;
+      text-align: center;
+      padding: 32px 0;
+      margin-top: 80px;
+    }
 
-.intro h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.intro h2 {
-  font-size: 28px;
-  color: #606c38;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
-.intro p {
-  font-weight: 400;
-}
-
-.about h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-p {
-  line-height: 1.6;
-  font-size: 16px;
-  max-width: 700px;
-}
-
-  <span id="element"></span>
-  #element {
-    font-size: 90px;
-    color: rgb(99, 110, 114);
-    font-weight: 100;
-    display: block;
-    margin-bottom: 20px;
-    font-family: 'Roboto', sans-serif;
-  }
-
-
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 0; }
+      .hero h1 { font-size: 40px; }
+      #element { font-size: 22px; }
+      section h1 { font-size: 36px; }
+      nav { padding: 14px 16px; flex-wrap: wrap; gap: 12px; }
+      nav ul { gap: 4px; flex-wrap: wrap; }
+      nav a { padding: 8px 12px; font-size: 14px; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
-
 <body>
   <header>
     <nav>
-      <div>NIS's Portfolio</div>
-      <div>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
-          <li>LinkedIn</li>
-          <li>GitHub</li>
-        </ul>
-      </div>
+      <div class="brand">Nischay</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#story">Journey</a></li>
+        <li><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
     </nav>
   </header>
 
-<main>
-  <section class="hero">
-    <div class="intro">
-      <h1>Hi, I'm Nischay</h1>
-      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        <span id="element"></span>
-      <script>
-        var typed = new Typed('#element', {
-          strings: ['A Techie 15 YO', 'A Programmer', 'A Web Developer', 'A Tech Enthusiast'],
-          typeSpeed: 40,
-        });
-      </script>
-      <p>Welcome to my portfolio website! I'm passionate about technology and love to explore new advancements in the field. Here, you'll find information about my projects, skills, and experiences. Feel free to browse around and get to know more about me!</p>
-    </div>
+  <main>
+    <section id="home" class="container">
+      <div class="hero">
+        <div class="stack">
+          <h1>Hi, I'm Nischay</h1>
+          <span id="element">A Techie 15 YO</span>
+          <p>Welcome to my portfolio. I'm passionate about technology and love exploring new advancements in the field. Here you'll find my projects, skills, and experiences as I continue learning and building.</p>
+        </div>
 
-    <div class="about">
-      <h1>About Me</h1>
-      <p>I am a 15-year-old tech enthusiast with a keen interest in programming, web development, and emerging technologies. I enjoy working on projects that challenge me to learn and grow my skills. In my free time, I like to read tech blogs, experiment with coding, and participate in online tech communities.</p>
-    </div>
-  </section>
-  
+        <div id="about" class="card stack">
+          <h1 style="font-size: 36px; margin-bottom: 20px;">About Me</h1>
+          <p>I'm a 15-year-old tech enthusiast with a keen interest in programming, web development, and emerging technologies. I enjoy working on projects that challenge me to learn and grow. In my free time, I read tech blogs, experiment with code, and participate in online tech communities.</p>
+        </div>
+      </div>
+    </section>
 
-</main>
+    <section id="projects" class="container">
+      <h1>Projects & Experience</h1>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>School Newspaper</h3>
+          <p>Worked on creating and managing content for the school newspaper</p>
+        </div>
+        <div class="project-card">
+          <h3>Tech Blog on Blogspot</h3>
+          <p>Created and maintained a technology-focused blog sharing insights and tutorials</p>
+        </div>
+        <div class="project-card">
+          <h3>Online Learning Platform</h3>
+          <p>Helped my dad set up and configure his online learning platform</p>
+        </div>
+        <div class="project-card">
+          <h3>Internship Experience</h3>
+          <p>Worked as an intern gaining hands-on experience in tech industry</p>
+        </div>
+        <div class="project-card">
+          <h3>IoT School Projects</h3>
+          <p>Built IoT-enabled school projects integrating hardware and software</p>
+        </div>
+        <div class="project-card">
+          <h3>Design Work</h3>
+          <p>Created multiple posters and presentations for school events and projects</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="container">
+      <h1>How I Got Here</h1>
+      <div class="story-timeline stack-lg">
+        <p>Growing up, I've always been fascinated by technology.</p>
+        <p>If setting up installers and custom launchers counts, I started when I was just 5 years old!</p>
+        <p>I got started with learning HTML, CSS, and JavaScript at a young age through platforms like Google Grasshopper and Brilliant.</p>
+        <p>Then I got into anime, which led me to join Telegram groups where I discovered streaming and content management.</p>
+        <p>I started my own blog related to streaming and began posting content regularly.</p>
+        <p>That project closed soon after (I know it was immature of me), but it introduced me to cloud servers, Heroku hosting, and the fundamentals of streaming technology.</p>
+        <p>I had some weird experiences along the way. I was around 10 or 11 at that time.</p>
+        <p>I managed everything through Blogspot because I wasn't deep into CMS systems yet.</p>
+        <p>Around that time, my dad consulted with a company to get his online learning startup off the ground, but they undercut him and only provided a simple WordPress template with basic login functionality.</p>
+        <p>Then COVID hit our family hard. The isolation made me even lonelier, which pushed me deeper into coding as a way to cope and create.</p>
+        <p>During those difficult times, I helped him set up his online courses using Google Drive and simple access-sharing logic.</p>
+        <p>Now I'm working on it again, building it bigger and better than it ever was before.</p>
+        <p>And that's my story so far. Still learning, still building, and excited for what comes next.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="achievements">
+        <h1>Achievements</h1>
+        <p>🏆 EI ATS 2024 Gold Scholar</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nischay. Built with passion and code.</p>
+  </footer>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    new Typed('#element', {
+      strings: ['A Techie 15 YO', 'A Programmer', 'A Web Developer', 'A Tech Enthusiast'],
+      typeSpeed: 40,
+      backSpeed: 24,
+      backDelay: 1200,
+      loop: true
+    });
+  </script>
 </body>
 </html>
