@@ -87,8 +87,7 @@ Visit the deployed site: **[https://nischay17.github.io/hackclubportfolio/portfo
 ## 📧 Contact
 
 - **GitHub:** [@NISCHAY17](https://github.com/NISCHAY17)
-- **LinkedIn:** [Your Profile]
-- **Email:** [Your Email]
+- **Email:** [Nischay@nidal.in]
 
 ---
 
